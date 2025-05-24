@@ -3,7 +3,11 @@ from pydantic import BaseModel
 from model_runner import FlanT5Model
 import json
 
-app = FastAPI()
+app = FastAPI(
+    title="Wine Spec Generator",
+    description="Generate wine flavor profiles with food pairing suggestions.",
+    version="1.0.0",
+)
 model = FlanT5Model()
 
 
